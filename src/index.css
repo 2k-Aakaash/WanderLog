@@ -1,0 +1,43 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'SharpSansRegular', sans-serif;
+}
+
+*{
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'SharpSansRegular', sans-serif !important;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8B5E3B; /* Use your theme.secondary color here */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #533822; /* Optional: change on hover */
+}
+
+

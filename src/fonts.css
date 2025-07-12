@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'SharpSansLight';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Light.woff?updatedAt=1701612432844') format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SharpSansLightItalic';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Light%20Italic.woff?updatedAt=1701612432044') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SharpSansRegular';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Regular.woff') format('woff'); /* You didn’t provide this one; using placeholder */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SharpSansRegularItalic';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Italic.woff?updatedAt=1701612490087') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SharpSansMedium';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Medium.woff?updatedAt=1701612453253') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SharpSansMediumItalic';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Medium%20Italic.woff?updatedAt=1701612428363') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SharpSansSemiBold';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Semibold.woff?updatedAt=1701612513730') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SharpSansSemiBoldItalic';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Semibold%20Italic.woff?updatedAt=1701612430860') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SharpSansBold';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/SharpSansBold.woff?updatedAt=1701674171934') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'SharpSansBoldItalic';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Bold%20Italic.woff?updatedAt=1701612429444') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SharpSansExtraBold';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20Extrabold.woff?updatedAt=1701612435101') format('woff');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'SharpSansExtraBoldItalic';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/Sharp%20Sans%20ExtraBold%20Italic.woff?updatedAt=1701612440572') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SharpSansRegularStandard';
+    src: url('https://ik.imagekit.io/026k2i7ys/fonts/SharpSans.woff?updatedAt=1701612425934') format('woff');
+    font-weight: 400;
+}
