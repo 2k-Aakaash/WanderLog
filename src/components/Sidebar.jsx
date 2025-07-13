@@ -1,4 +1,4 @@
-// src/components/Sidebar.jsx
+// src/components/SideBar.jsx
 import React from 'react';
 import {
     Drawer,
@@ -12,7 +12,7 @@ import {
 import { Home, ListIcon, Tag, Archive, Star, Settings, Info } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
-const Sidebar = ({ sidebarOpen, isMobile, handleSidebarToggle, drawerWidth, theme }) => {
+const SideBar = ({ sidebarOpen, isMobile, handleSidebarToggle, drawerWidth, theme }) => {
     const { navigate } = useRouter();
 
     const sidebarItems = [
@@ -112,4 +112,4 @@ const Sidebar = ({ sidebarOpen, isMobile, handleSidebarToggle, drawerWidth, them
     );
 };
 
-export default Sidebar;
+export default SideBar;
