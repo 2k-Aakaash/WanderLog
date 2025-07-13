@@ -20,6 +20,7 @@
     "@uiw/react-md-editor": "^4.0.7",
     "browser-fs-access": "^0.38.0",
     "crypto-js": "^4.2.0",
+    "firebase": "^11.10.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.507.0",
     "react": "^19.0.0",

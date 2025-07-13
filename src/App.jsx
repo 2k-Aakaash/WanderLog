@@ -1,5 +1,7 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from './utils/firebase'
 import { ThemeProvider, createTheme, CssBaseline, Box, useMediaQuery, useTheme } from '@mui/material';
 import { Router } from './context/RouterContext';
 import TopBar from './components/TopBar';
@@ -9,13 +11,29 @@ import RouteRenderer from './components/RouteRenderer';
 import { lightTheme, darkTheme } from './themes/themes';
 
 const WanderLogApp = () => {
+    const [user, setUser] = useState(null);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const muiTheme = useTheme(); // Changed from useMuiTheme to useTheme
     const isMobile = useMediaQuery(muiTheme.breakpoints.down('md'));
     const drawerWidth = 240;
-
     const currentTheme = isDarkMode ? darkTheme : lightTheme;
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user); // user is logged in
+            } else {
+                setUser(null); // logged out
+            }
+        });
+        return () => unsubscribe(); // cleanup
+    }, []);
+
+    useEffect(() => {
+        const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setIsDarkMode(systemPref);
+    }, []);
 
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
@@ -28,6 +46,7 @@ const WanderLogApp = () => {
             setSidebarOpen(true);
         }
     }, [isMobile]);
+
 
     const handleSidebarToggle = () => {
         setSidebarOpen(!sidebarOpen);
@@ -58,6 +77,8 @@ const WanderLogApp = () => {
                     transition: 'all 0.3s ease'
                 }}>
                     <TopBar
+                        user={user}
+                        setUser={setUser}
                         theme={currentTheme}
                         isDarkMode={isDarkMode}
                         toggleTheme={toggleTheme}
