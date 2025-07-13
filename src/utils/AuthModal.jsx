@@ -59,9 +59,14 @@ export default function AuthModal({ user, setUser }) {
             {/* TopBar Icon */}
             <IconButton onClick={() => setOpen(true)}>
                 {user ? (
-                    <Avatar src={user.photoURL} sx={{ width: 24, height: 24 }} />
+                    <Avatar
+                        src={user.photoURL || undefined}
+                        sx={{ width: 24, height: 24 }}
+                    >
+                        {!user.photoURL && user.email ? user.email[0].toUpperCase() : null}
+                    </Avatar>
                 ) : (
-                    <Avatar sx={{ width: 24, height: 24 }} /> // default
+                    <Avatar sx={{ width: 24, height: 24 }} /> // default empty avatar
                 )}
             </IconButton>
 
@@ -72,7 +77,12 @@ export default function AuthModal({ user, setUser }) {
                 }}>
                     {user ? (
                         <>
-                            <Avatar src={user.photoURL} sx={{ width: 56, height: 56, mx: 'auto' }} />
+                            <Avatar
+                                src={user.photoURL || undefined}
+                                sx={{ width: 56, height: 56, mx: 'auto' }}
+                            >
+                                {!user.photoURL && user.email ? user.email[0].toUpperCase() : null}
+                            </Avatar>
                             <Typography mt={1}>{user.displayName || user.email}</Typography>
                             <Button
                                 onClick={handleLogout}

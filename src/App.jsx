@@ -23,12 +23,22 @@ const WanderLogApp = () => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user); // user is logged in
+                console.log('[auth] currentUser:', auth.currentUser);
             } else {
                 setUser(null); // logged out
             }
         });
         return () => unsubscribe(); // cleanup
     }, []);
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log("User is signed in:", user.uid);
+            // safe to save now
+        } else {
+            console.log("No user signed in");
+        }
+    });
 
     useEffect(() => {
         const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;

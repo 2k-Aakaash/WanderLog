@@ -1,6 +1,7 @@
 // src/components/DiaryDetailPage.jsx
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { doc, getDoc } from "firebase/firestore";
 import { Box, Button, Typography } from '@mui/material';
 import * as fsAccess from 'browser-fs-access';
 import { loadAndDecryptWLFile } from '../utils/wlFileHelper';
@@ -8,15 +9,14 @@ import { loadAndDecryptWLFile } from '../utils/wlFileHelper';
 const DiaryDetailPage = ({ theme }) => {
     const [diary, setDiary] = useState(null);
 
-    const handleLoadFile = async () => {
-        try {
-            const file = await fsAccess.fileOpen({
-                extensions: [".wl"]
-            });
-            const data = await loadAndDecryptWLFile(file);
-            setDiary(data);
-        } catch (e) {
-            console.error(e);
+    const loadDiaryFromFirebase = async (diaryId) => {
+        const docSnap = await getDoc(doc(db, "diaries", diaryId));
+        if (docSnap.exists()) {
+            const encrypted = docSnap.data().encrypted;
+            return decryptData(encrypted);
+        } else {
+            console.error("No such diary!");
+            return null;
         }
     };
 
@@ -28,7 +28,7 @@ const DiaryDetailPage = ({ theme }) => {
                     <Box>
                         <Button
                             variant="contained"
-                            onClick={handleLoadFile}
+                            onClick={loadDiaryFromFirebase}
                             sx={{
                                 bgcolor: theme.colors.primary,
                                 color: theme.colors.white,
