@@ -5,7 +5,7 @@ import { auth } from './utils/firebase'
 import { ThemeProvider, createTheme, CssBaseline, Box, useMediaQuery, useTheme } from '@mui/material';
 import { Router } from './context/RouterContext';
 import TopBar from './components/TopBar';
-import SideBar from './components/SideBar';
+import SideBar from './components/Sidebar';
 import MainLayout from './components/MainLayout';
 import RouteRenderer from './components/RouteRenderer';
 import { lightTheme, darkTheme } from './themes/themes';
