@@ -1,11 +1,13 @@
 {
   "name": "wanderlog",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1-dev",
   "type": "module",
+  "status": "in development",
+  "description": "Wanderlog – Currently in active development. Not ready for production use.",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "vite build",
     "deploy": "npm run build && git checkout main && rm -rf * && cp -r dist/* . && git add . && git commit -m \"Deploy new build\" && git push && git checkout dev",
     "lint": "eslint .",
     "preview": "vite preview"

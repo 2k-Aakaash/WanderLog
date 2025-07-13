@@ -1,12 +1,27 @@
-# React + Vite
+# Wanderlog (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚧 **Project in Active Development**  
+This project is currently under development. Please do **not** clone, fork, or modify this repository unless you have explicit permission from the repository owner.
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Wanderlog** is a web application built using **React** and **Vite**. It leverages modern frontend tooling for fast development and efficient builds.
 
-## Expanding the ESLint configuration
+The application is hosted via [Vercel](https://vercel.com), with source control and deployment workflows already configured for production use.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React** for building user interfaces
+- **Vite** for development and build tooling
+- **ESLint** for code linting and consistency
+- **Hosted on** Vercel
+
+## Guidelines
+
+- 🔒 **Do not clone or fork this repository without permission**
+- 🛠️ **Do not modify the codebase unless you get permission from owner(me)**
+- 📄 For questions or collaboration requests, please contact me
+
+## License
+
+This project is private and not open source at this time.
